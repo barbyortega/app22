@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PickMeUp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" @fadeIn>
+  <div id="welcome-container" @slideIn>
+    <img id="logo" src="assets/icon/PickMeUpLogoP-removebg-preview.png" alt="Logo">
+    <h1>Bienvenido a Pick Me Up</h1>
+    <ion-button (click)="navigateToLogin()">Iniciar Sesión</ion-button>
+    
+  </div>
+</ion-content>

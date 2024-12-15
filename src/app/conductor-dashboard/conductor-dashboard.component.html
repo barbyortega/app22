@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Conductor</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Tarjeta de bienvenida -->
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Bienvenido, {{ userName }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Mapa Interactivo -->
+      <div class="map-container">
+        <google-map
+          [center]="center"
+          [zoom]="zoom"
+          style="height: 200px; width: 100%;">
+        </google-map>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Sección de Estadísticas -->
+  <ion-card class="stats-card">
+    <ion-card-header>
+      <ion-card-title>Estadísticas del Conductor</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <!-- Viajes Realizados -->
+          <ion-col size="6">
+            <div class="stat-box">
+              <ion-icon name="car-outline" class="stat-icon"></ion-icon>
+              <div class="stat-info">
+                <h2 class="stat-value">25</h2>
+                <p class="stat-label">Viajes Realizados</p>
+              </div>
+            </div>
+          </ion-col>
+
+          <!-- Ingresos -->
+          <ion-col size="6">
+            <div class="stat-box">
+              <ion-icon name="cash-outline" class="stat-icon"></ion-icon>
+              <div class="stat-info">
+                <h2 class="stat-value">$30,000</h2>
+                <p class="stat-label">Ingresos Totales</p>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones de Acción Rápida -->
+  <div class="quick-actions">
+    <ion-button expand="full" (click)="viewRoutes()">
+      <ion-icon name="map-outline"></ion-icon>
+      <ion-label>Ver Rutas</ion-label>
+    </ion-button>
+    <ion-button expand="full" color="secondary" (click)="requestHelp()">
+      <ion-icon name="help-circle-outline"></ion-icon>
+      <ion-label>Solicitar Ayuda</ion-label>
+    </ion-button>
+    <ion-button expand="full" color="primary" (click)="editProfile()">
+      <ion-icon name="create-outline"></ion-icon>
+      <ion-label>Editar Perfil</ion-label>
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="viewProfile()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-button>
+      <ion-button expand="full" (click)="logout()">
+        Cerrar Sesión
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

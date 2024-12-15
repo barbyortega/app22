@@ -1,0 +1,50 @@
+/* src/app/splash-screen/splash-screen.component.scss */
+
+/* Estilo para ion-content con clase específica */
+ion-content.splash-screen {
+  --background: #010007; /* Azul marino oscuro */
+  color: #fff; /* Texto blanco para contraste */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  opacity: 1;
+  animation: fadeOut 3s ease-out forwards;
+}
+
+/* Estilo para el contenedor del logo */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+/* Estilo para el botón de inicio */
+.start-button {
+  margin-top: 20px;
+  --background: #fff; /* Fondo blanco para el botón */
+  --color: #010007; /* Texto azul marino para el botón */
+}
+
+/* Estilo para la descripción */
+.description {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.description h1,
+.description p {
+  color: #fff; /* Texto blanco para la descripción */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

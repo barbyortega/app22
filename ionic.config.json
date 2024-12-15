@@ -1,0 +1,7 @@
+{
+  "name": "PickMeUp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

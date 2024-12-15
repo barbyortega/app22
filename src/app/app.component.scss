@@ -1,0 +1,134 @@
+/* Estilo global para toda la aplicación */
+ion-app {
+  --background: #ffffff; /* Fondo blanco para toda la aplicación */
+}
+
+/* Estilos para el menú lateral */
+ion-menu {
+  --background: #ffffff; /* Fondo blanco para el menú lateral */
+}
+
+/* Estilo para el contenido del menú lateral */
+ion-menu ion-content {
+  --background: #ffffff; /* Fondo blanco para el contenido del menú lateral */
+}
+
+/* Estilo para el menú lateral en diferentes modos (material y ios) */
+ion-menu.md ion-content {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+ion-menu.md ion-list {
+  padding: 20px 0;
+}
+
+ion-menu.md ion-note {
+  margin-bottom: 30px;
+}
+
+ion-menu.md ion-list-header,
+ion-menu.md ion-note {
+  padding-left: 10px;
+}
+
+ion-menu.md ion-list#inbox-list {
+  border-bottom: 1px solid #d7d8da; /* Línea de separación gris claro */
+}
+
+ion-menu.md ion-list#inbox-list ion-list-header {
+  font-size: 22px;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+ion-menu.md ion-list#labels-list ion-list-header {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #757575; /* Color gris para etiquetas */
+  min-height: 26px;
+}
+
+ion-menu.md ion-item {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border-radius: 4px;
+}
+
+ion-menu.md ion-item.selected {
+  --background: rgba(0, 0, 255, 0.14); /* Azul claro para ítems seleccionados */
+}
+
+ion-menu.md ion-item.selected ion-icon {
+  color: #0000ff; /* Azul oscuro para íconos seleccionados */
+}
+
+ion-menu.md ion-item ion-icon {
+  color: #003366; /* Azul oscuro para íconos */
+}
+
+ion-menu.md ion-item ion-label {
+  font-weight: 500;
+}
+
+/* Estilos específicos para iOS */
+ion-menu.ios ion-content {
+  --padding-bottom: 20px;
+}
+
+ion-menu.ios ion-list {
+  padding: 20px 0 0 0;
+}
+
+ion-menu.ios ion-note {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+ion-menu.ios ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 50px;
+}
+
+ion-menu.ios ion-item.selected ion-icon {
+  color: #0000ff; /* Azul oscuro para íconos seleccionados */
+}
+
+ion-menu.ios ion-item ion-icon {
+  font-size: 24px;
+  color: #003366; /* Azul oscuro para íconos */
+}
+
+ion-menu.ios ion-list#labels-list ion-list-header {
+  margin-bottom: 8px;
+}
+
+ion-menu.ios ion-list-header,
+ion-menu.ios ion-note {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+ion-menu.ios ion-note {
+  margin-bottom: 8px;
+}
+
+ion-note {
+  display: inline-block;
+  font-size: 16px;
+  color: #bea306; /* Amarillo oscuro para notas (puedes ajustar según el tono deseado) */
+}
+
+ion-item.selected {
+  --color: #0000ff; /* Azul oscuro para el texto del ítem seleccionado */
+}
+
+/* Estilo para el logo */
+.logo {
+  width: 150px; /* Ajusta el tamaño del logo */
+  margin: 0 auto; /* Centra el logo */
+  display: block; /* Para asegurarse de que ocupe toda la línea */
+}

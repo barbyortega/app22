@@ -1,0 +1,43 @@
+
+ion-content {
+  --background: url('/assets/icon/FondoBPMU.png') no-repeat center center;
+  --background-size: 150% auto; /* Aumenta el tamaño de la imagen de fondo para que esté más alejada */
+  background-color: rgb(255, 255, 255); /* Fondo blanco para dar contraste */
+  background-position: center center; /* Asegura que la imagen esté centrada */
+  background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+#welcome-container {
+  text-align: center;
+  color: #ffffff; /* Color de texto blanco para que contraste con el fondo */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el contenido */
+  align-items: center; /* Centra horizontalmente el contenido */
+  flex: 1; /* Toma el espacio disponible para empujar el botón hacia abajo */
+  /* Asegúrate de que el contenedor tenga suficiente espacio para la animación */
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+#logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem; /* Aumenta el tamaño del texto */
+  color: #010118; /* Azul marino oscuro */
+  margin: 10px 0;
+  font-weight: bold; /* Hace el texto más grueso */
+}
+
+ion-button {
+  --background: #b39306; /* Cambia el color del botón si lo deseas */
+  --color: #ffff; /* Color del texto del botón */
+  margin-bottom: 20px; /* Añade un margen inferior para separación */
+}

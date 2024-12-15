@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-img src="assets/icon/PickMeUpLogoP-removebg-preview.png" class="app-logo" alt="Logo de PickMeUp"></ion-img>
+    </ion-buttons>
+    <ion-title class="app-title">PickMeUp</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="openSettings()" aria-label="Configuraciones">
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- Tarjeta de saludo personalizado -->
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Bienvenido, {{ userName }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Encuentra el mejor vehículo para tu viaje con PickMeUp.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Barra de búsqueda estilizada -->
+  <div class="search-container">
+    <ion-item lines="none" class="search-item">
+      <ion-input class="search-input" placeholder="Origen" [(ngModel)]="origen"></ion-input>
+      <ion-input class="search-input" placeholder="Destino" [(ngModel)]="destino"></ion-input>
+      <ion-button fill="clear" class="search-button" (click)="calcularRuta()">
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+
+  <!-- Mapa interactivo -->
+  <div class="map-container" [ngClass]="{'loaded': mapLoaded}">
+    <div id="map" [style.height.px]="400" [style.width.%]="100" aria-label="Mapa interactivo de PickMeUp, donde puedes seleccionar tu destino"></div>
+  </div>
+
+  <!-- Botón de acción rápida -->
+  <div class="select-auto-button">
+    <ion-button expand="block" color="primary" class="styled-button" (click)="seleccionarAuto()" aria-label="Seleccionar un vehículo">
+      Seleccionar Auto
+    </ion-button>
+    <ion-icon name="car-outline" class="car-icon"></ion-icon>
+  </div>
+
+  <!-- Estadísticas del usuario -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tus estadísticas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Viajes Realizados</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>35</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="6">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Créditos Usados</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <p>$12.000</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<!-- Footer con barra de navegación -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="requestRide()" aria-label="Solicitar un viaje">
+          <ion-icon name="car-outline"></ion-icon>
+          <ion-label>Solicitar</ion-label>
+        </ion-tab-button>
+        
+        <!-- Botón para Historial -->
+<ion-tab-button (click)="mostrarRutas()">
+  <ion-icon name="map-outline"></ion-icon>
+  <ion-label>Historial</ion-label>
+</ion-tab-button>
+
+        <ion-button expand="full" (click)="logout()" aria-label="Cerrar sesión">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          Cerrar Sesión
+        </ion-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

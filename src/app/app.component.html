@@ -1,0 +1,34 @@
+<!-- Pantalla de presentación -->
+<app-splash-screen *ngIf="showSplash"></app-splash-screen>
+
+<!-- Menú lateral -->
+<ion-menu contentId="main-content" type="overlay">
+  <ion-header>
+    <ion-toolbar>
+      <!-- Logo en el menú -->
+      <ion-img src="assets/icon/PickMeUpLogoP-removebg-preview.png" class="logo"></ion-img>
+      <ion-title class="menu-title">PickMeUp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <!-- Lista de páginas del menú lateral -->
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+        <ion-item [routerLink]="p.url" routerDirection="root" lines="none">
+          <ion-icon [name]="p.icon" slot="start"></ion-icon>
+          <ion-label>{{ p.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+
+    <!-- Lista de etiquetas adicionales -->
+    <ion-list>
+      <ion-list-header>Etiquetas</ion-list-header>
+      <ion-note *ngFor="let label of labels" class="menu-label">{{ label }}</ion-note>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Contenedor principal de la aplicación -->
+<ion-router-outlet id="main-content"></ion-router-outlet>

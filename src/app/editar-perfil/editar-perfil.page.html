@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="guardarPerfil()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="perfil.nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="perfil.correo" name="correo" disabled></ion-input> <!-- Solo lectura -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="perfil.contrasena" name="contrasena" type="password" disabled></ion-input> <!-- Solo lectura -->
+    </ion-item>
+
+    <ion-item *ngIf="perfil.foto" class="foto-perfil">
+      <img [src]="perfil.foto" alt="Foto de Perfil">
+    </ion-item>
+    
+    
+    
+    <ion-button expand="full" (click)="abrirCamara()">Cambiar Foto</ion-button>
+
+    <ion-button expand="full" type="submit">Guardar Cambios</ion-button>
+  </form>
+</ion-content>

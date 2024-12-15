@@ -1,0 +1,14 @@
+<div *ngIf="historial.length > 0; else sinRutas">
+  <h3>Historial de Rutas</h3>
+  <ul>
+    <li *ngFor="let ruta of historial">
+      <strong>Origen:</strong> {{ ruta.origen }} <br />
+      <strong>Destino:</strong> {{ ruta.destino }} <br />
+      <strong>Fecha:</strong> {{ ruta.fecha }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #sinRutas>
+  <p>No hay rutas en el historial.</p>
+</ng-template>

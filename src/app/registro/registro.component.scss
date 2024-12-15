@@ -1,0 +1,142 @@
+/* Estilo general del contenido del formulario */
+ion-content {
+  --background: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa el 100% del alto de la ventana */
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Contenedor principal */
+.form-container {
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para el formulario */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Estilo del card */
+ion-card {
+  width: 100%;
+  padding: 20px;
+  --background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Estilo del título en el card */
+ion-card-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #010118;
+}
+
+/* Estilo de los items dentro del card */
+ion-item {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Estilo del input */
+ion-input {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --placeholder-color: #aaa;
+  --color: #000;
+}
+
+/* Estilo del botón principal */
+.primary-button {
+  --background: #b39306;
+  --color: white;
+  border-radius: 50px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+  width: 100%;
+  max-width: 350px; /* Ancho máximo para el botón */
+}
+
+/* Estilo del botón en hover */
+.primary-button:hover {
+  --background: #a77c05;
+}
+
+/* Estilo del botón secundario */
+.secondary-button {
+  --background: #f4f4f9;
+  --color: #b39306;
+  border-radius: 50px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 350px; /* Ancho máximo para el botón */
+  transition: background 0.3s ease;
+}
+
+/* Estilo del botón secundario en hover */
+.secondary-button:hover {
+  --background: #e5e5e5;
+}
+
+/* Estilo del mensaje de éxito */
+.success-message {
+  color: #2ecc71;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Estilo de las etiquetas del input */
+ion-label {
+  color: #aaa;
+}
+
+ion-item ion-label {
+  margin-bottom: 4px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .app-logo {
+    width: 180px;
+  }
+
+  ion-card {
+    padding: 15px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-logo {
+    width: 150px;
+  }
+
+  ion-card-title {
+    font-size: 1.3rem;
+  }
+
+  .success-message {
+    font-size: 0.9rem;
+  }
+}

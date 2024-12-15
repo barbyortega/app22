@@ -1,0 +1,132 @@
+/* Estilo general del contenido del login */
+ion-content {
+  --background: #b8b8bd; 
+  display: flex;
+  flex-direction: column; /* Ajuste para colocar el contenido principal y el footer en una columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  height: 100%; /* Asegúrate de que el contenido ocupe toda la altura del contenedor */
+  overflow: hidden; /* Asegúrate de que no haya barras de desplazamiento */
+}
+
+/* Contenedor principal del login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  width: 100%;
+  max-width: 400px; /* Ajusta el ancho máximo del contenedor */
+  padding: 20px;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  opacity: 1; /* Asegúrate de que la opacidad sea 1 después de la animación */
+  transform: translateY(0); /* Asegúrate de que la posición final sea correcta */
+  transition: opacity 1s ease-in, transform 0.5s ease-out; /* Transición para opacidad y transformación */
+}
+
+/* Estilo del card del login */
+ion-card {
+  width: 100%; /* Asegúrate de que el card no se desborde */
+  padding: 20px;
+  --background: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+  border-radius: 12px; /* Bordes redondeados más prominentes */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo del header del card */
+ion-card-header {
+  text-align: center;
+}
+
+/* Estilo del título del card */
+ion-card-title {
+  font-size: 1.5rem; /* Tamaño de fuente del título */
+  color: #010118; /* Color del texto del título */
+}
+
+/* Estilo de los items dentro del card */
+ion-item {
+  width: 100%; /* Asegúrate de que el item ocupe todo el ancho del card */
+  margin-bottom: 15px;
+}
+
+/* Estilo del input */
+ion-input {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --placeholder-color: #aaa; /* Color del texto del placeholder */
+  --color: #000; /* Color del texto ingresado */
+}
+
+/* Estilo de las etiquetas del input */
+ion-label {
+  color: #aaa; /* Color del texto del label */
+}
+
+ion-item ion-label {
+  margin-bottom: 4px; /* Espacio entre el label y el input */
+}
+
+/* Estilo del botón de inicio de sesión */
+ion-button {
+  --background: #b39306; /* Color fijo del botón */
+  --color: #ffff; /* Color del texto del botón */
+  border-radius: 50px; /* Bordes redondeados en el botón */
+  margin-top: 10px; /* Añade margen superior para separación */
+  transition: background 0.3s ease; /* Transición de cambio de color de fondo */
+}
+
+/* Estilo del botón en hover */
+ion-button:hover {
+  --background: #a77c05; /* Color de fondo en hover */
+}
+
+/* Estilo del mensaje de error */
+.error {
+  color: rgb(69, 0, 0);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Estilo del footer */
+ion-footer {
+  margin-top: auto; /* Empuja el footer hacia el fondo del contenedor */
+  text-align: center;
+  padding: 10px 0; /* Añade un poco de padding vertical */
+}
+
+/* Estilo del toolbar del footer */
+ion-toolbar {
+  display: flex;
+  justify-content: center; /* Centra el contenido del toolbar */
+  padding: 0;
+}
+
+/* Estilo del botón de registro */
+ion-button.icon-button {
+  --background: transparent; /* Fondo transparente para el botón */
+  --color: #ffffff; /* Color del texto del botón */
+  display: flex;
+  align-items: center; /* Centra el texto y el icono verticalmente */
+}
+
+/* Estilo del icono dentro del botón de registro */
+ion-icon {
+  font-size: 24px; /* Tamaño del icono */
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilo del texto del botón de registro */
+.register-text {
+  font-weight: bold; /* Fuente en negrita */
+}
+
+/* Clase para activar animaciones */
+.animated {
+  opacity: 1 !important; /* Asegura que la opacidad sea 1 después de la animación */
+  transform: translateY(0) !important; /* Asegura que la transformación sea 0 después de la animación */
+}

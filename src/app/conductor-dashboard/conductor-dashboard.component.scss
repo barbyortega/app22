@@ -1,0 +1,90 @@
+/* Estilo general para el contenido del dashboard */
+ion-content {
+  --background: #f8f9fa; /* Fondo claro para el contenido */
+  padding: 0;
+}
+
+/* Estilo para el contenedor del mapa */
+.map-container {
+  margin: 16px; /* Margen para separar el mapa de los bordes */
+  border-radius: 8px; /* Bordes redondeados del contenedor del mapa */
+  overflow: hidden; /* Asegura que el contenido no sobresalga */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto elevado */
+}
+.stat-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f0f0f5;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 40px;
+  color: #3880ff;
+  margin-right: 10px;
+}
+
+.stat-info {
+  text-align: left;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.quick-actions {
+  margin-top: 20px;
+}
+
+.welcome-card {
+  background-color: #fafafa;
+}
+
+.stats-card {
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+
+
+/* Estilo para los botones de acción rápida */
+ion-button {
+  margin: 8px; /* Margen para separar los botones */
+  border-radius: 4px; /* Bordes redondeados para los botones */
+}
+
+/* Estilo para los botones en el pie de página */
+ion-footer {
+  --background: #007bff; /* Fondo azul para el pie de página */
+}
+
+ion-footer ion-toolbar {
+  color: #fff; /* Texto blanco para los botones del pie de página */
+}
+
+/* Estilo para el título del dashboard */
+ion-card-title {
+  font-size: 22px; /* Tamaño de fuente para el título del dashboard */
+  font-weight: bold; /* Negrita para el título */
+  text-align: center; /* Centrar el texto del título */
+}
+/* Estilo para el botón de cerrar sesión */
+ion-button {
+  --color: #fff; /* Cambia el color del texto a blanco */
+  background-color: #004d40; /* Asegúrate de que el fondo contraste bien */
+  border-radius: 20px; /* Opcional: redondear los bordes del botón */
+}
+
+ion-button:hover {
+  background-color: #003d33; /* Color de fondo más oscuro al pasar el ratón */
+}

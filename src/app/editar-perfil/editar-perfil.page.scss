@@ -1,0 +1,21 @@
+.foto-perfil {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+    margin: 20px 0;
+  }
+  
+  .foto-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto; /* Asegura que la imagen esté centrada */
+    display: block; /* Se asegura de que la imagen se muestre como un bloque para centrarse */
+  }
+  ion-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+ 
+  

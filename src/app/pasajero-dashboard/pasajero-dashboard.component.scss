@@ -1,0 +1,133 @@
+/* Logo en el header */
+.app-logo {
+  height: 35px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Título en el header */
+ion-title.app-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #003366;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo del ícono de configuración en el header */
+ion-button {
+  --color: #003366;
+}
+
+/* Tarjeta de bienvenida */
+.welcome-card {
+  --background: #e0f7fa;
+  color: #004d40;
+}
+
+/* Barra de búsqueda */
+.search-container {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  font-size: 1rem;
+  color: #333;
+}
+
+.search-button {
+  --background: #004d40;
+  --color: #fff;
+  border-radius: 50%;
+}
+
+/* Mapa interactivo */
+.map-container {
+  height: 350px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 2px solid #004d40;
+}
+
+/* Botón "Seleccionar Auto" */
+.select-auto-button {
+  margin: 20px 0;
+  position: relative;
+}
+
+.styled-button {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 50px;
+  background-color: #004d40;
+  color: #fff;
+
+  &:hover {
+    background-color: darken(#004d40, 10%);
+  }
+}
+
+.car-icon {
+  font-size: 1.5rem;
+  color: #004d40;
+  margin-left: 10px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Estadísticas del usuario */
+ion-card {
+  margin-top: 20px;
+}
+
+ion-card-title {
+  color: #004d40;
+}
+
+ion-card-content p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Barra de navegación */
+ion-tab-bar {
+  background-color: #fff;
+  --color-selected: #004d40;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .styled-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .app-logo {
+    height: 30px;
+  }
+
+  ion-title.app-title {
+    font-size: 1rem;
+  }
+}
+
+/* Estilo para el botón de cerrar sesión */
+ion-button {
+  --color: #fff; /* Cambia el color del texto a blanco */
+  background-color: #004d40; /* Asegúrate de que el fondo contraste bien */
+  border-radius: 20px; /* Opcional: redondear los bordes del botón */
+}
+
+ion-button:hover {
+  background-color: #003d33; /* Color de fondo más oscuro al pasar el ratón */
+}
+

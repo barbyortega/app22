@@ -1,0 +1,67 @@
+/* Estilo general del contenido de la página de error */
+ion-content {
+    --background: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Contenedor principal de la página de error */
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in, transform 0.5s ease-out;
+  }
+  
+  /* Estilo del card de error */
+  ion-card {
+    width: 100%;
+    padding: 20px;
+    --background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Imagen de error */
+  .error-image {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo del mensaje de error */
+  .error-message {
+    font-size: 1.5rem;
+    color: #010118;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo del botón de volver al login */
+  ion-button {
+    --background: #b39306;
+    --color: #ffff;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  ion-button:hover {
+    --background: #a77c05;
+  }
+  
